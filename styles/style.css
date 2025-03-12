@@ -1,0 +1,127 @@
+/* ---------- RESET BÁSICO ---------- */
+        /* Remove todos os espaçamentos padrão do navegador */
+        * {
+            margin: 0;       /* Zera margens */
+            padding: 0;      /* Zera paddings */
+            box-sizing: border-box; /* Faz o padding não aumentar o tamanho total dos elementos */
+        }
+    
+        /* ---------- ESTILOS GERAIS ---------- */
+        body {
+            background: #000;     /* Fundo preto */
+            color: white;          /* Cor do texto */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+        }
+    
+        /* ---------- CABEÇALHO ---------- */
+        .header {
+            display: flex;            /* Ativa o flexbox */
+            justify-content: space-between; /* Coloca logo e botão em extremos opostos */
+            padding: 20px 50px;       /* Espaçamento interno: 20px topo/baixo, 50px laterais */
+            background: rgba(0, 0, 0, 0.8); /* Fundo preto com 80% de opacidade */
+            position: fixed;          /* Fixa o cabeçalho no topo */
+            width: 100%;              /* Ocupa 100% da largura */
+            z-index: 2;               /* Garante que fique acima de outros elementos */
+        }
+    
+        /* Logo Netflix */
+        .logo {
+            width: 150px;  /* Largura fixa da logo */
+        }
+    
+        /* Botão de Login */
+        .botao-login {
+            background: #E50914;  /* Vermelho característico da Netflix */
+            color: white;         /* Texto branco */
+            padding: 8px 18px;    /* 8px topo/baixo, 18px laterais */
+            border-radius: 4px;   /* Bordas levemente arredondadas */
+            text-decoration: none; /* Remove sublinhado do link */
+        }
+    
+        /* ---------- SEÇÃO PRINCIPAL (HERO) ---------- */
+        .hero {
+            height: 100vh; /* Altura igual à altura da tela (viewport height) */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* Overlay preto */
+                        url('../img/netflix.jpg'); /* Imagem de fundo */
+            background-size: cover;    /* Cobrir toda a área sem distorcer */
+            display: flex;            /* Ativa flexbox */
+            align-items: center;     /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            text-align: center;      /* Alinha texto ao centro */
+        }
+    
+        /* Container do conteúdo principal */
+        .hero-conteudo {
+            max-width: 800px;  /* Largura máxima do conteúdo */
+            padding: 20px;     /* Espaçamento interno */
+        }
+    
+        /* Título principal */
+        .hero h1 {
+            font-size: 3rem;    /* 3x o tamanho da fonte padrão (48px se padrão for 16px) */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+    
+        /* ---------- FORMULÁRIO DE EMAIL ---------- */
+        .email-box {
+            margin-top: 20px;  /* Espaço acima do formulário */
+        }
+    
+        /* Campo de email */
+        input[type="email"] {
+            padding: 15px;      /* Espaçamento interno */
+            width: 400px;       /* Largura fixa */
+            font-size: 1rem;    /* Tamanho da fonte (16px) */
+        }
+    
+        /* Botão "Vamos lá" */
+        .botao-email {
+            background: #E50914; /* Vermelho Netflix */
+            color: white;        /* Texto branco */
+            border: none;        /* Remove borda padrão */
+            padding: 15px 30px; /* Espaçamento interno */
+            font-size: 1.2rem;   /* Tamanho da fonte (19.2px) */
+            cursor: pointer;     /* Muda cursor para mãozinha */
+        }
+    
+        /* ---------- RODAPÉ ---------- */
+        .footer {
+            padding: 50px;           /* Espaçamento interno */
+            border-top: 8px solid #222; /* Borda superior cinza escuro */
+            margin-top: 50px;        /* Espaço acima do rodapé */
+        }
+    
+        /* Container dos links */
+        .footer-links {
+            display: flex;       /* Ativa flexbox */
+            flex-wrap: wrap;     /* Permite quebra de linha */
+            gap: 30px;          /* Espaço entre os links */
+            margin-bottom: 30px; /* Espaço abaixo dos links */
+        }
+    
+        /* Links do rodapé */
+        .footer a {
+            color: #808080;      /* Cor cinza médio */
+            text-decoration: none; /* Remove sublinhado */
+            width: 200px;        /* Largura fixa para cada coluna */
+        }
+    
+        /* ---------- RESPONSIVIDADE ---------- */
+        @media (max-width: 768px) { /* Estilos para telas menores que 768px */
+            .header {
+                padding: 20px;  /* Reduz padding */
+            }
+    
+            input[type="email"] {
+                width: 100%;    /* Ocupa largura total */
+                margin-bottom: 10px; /* Espaço abaixo do campo */
+            }
+    
+            .hero h1 {
+                font-size: 2rem; /* Reduz tamanho do título */
+            }
+    
+            .footer {
+                padding: 30px; /* Reduz espaçamento interno */
+            }
+        }
